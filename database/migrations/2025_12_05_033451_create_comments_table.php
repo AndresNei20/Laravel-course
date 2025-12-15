@@ -16,6 +16,8 @@ return new class extends Migration
 
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
 
+            $table->text('content');
+
             $table->morphs('commentable'); //This allows comments to belong to multiple models
 
             $table->timestamps();
